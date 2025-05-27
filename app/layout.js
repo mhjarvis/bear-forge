@@ -1,4 +1,6 @@
 import "@/assets/styles/globals.css"
+import Footer from "@/components/Footer"
+import Navigation from "@/components/Navigation"
 
 export const metadata = {
 	title: "Create Next App",
@@ -8,7 +10,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
-			<body>{children}</body>
+			<body className="bg-gray-50 text-gray-900">
+				<div className="min-h-screen flex flex-col">
+					<Navigation />
+					<main className="flex-grow max-w-6xl mx-auto w-full px-4 py-8">
+						{children}
+					</main>
+					<Footer />
+				</div>
+			</body>{" "}
 		</html>
 	)
 }
