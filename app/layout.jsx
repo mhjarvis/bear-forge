@@ -12,14 +12,12 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
 			<body>
-				<Header />
-				<div className="flex flex-row">
+				<div className="">
+					<Header />
 					<Navigation />
-					<main className="container mx-auto max-w-[1440px] px-8 py-4">
-						{children}
-					</main>
+					<main className="mt-16 ml-42">{children}</main>
+					<Footer />
 				</div>
-				<Footer />
 			</body>
 		</html>
 	)
